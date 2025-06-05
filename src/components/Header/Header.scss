@@ -1,0 +1,52 @@
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$white: #ffffff;
+$light_gray: #ffffff53;
+// $light_gray: #7B7D93;
+$violet: #df1cff;
+$violet_red: #ea0070;
+$aqua: #1ee0e1;
+$purple: #100943;
+$light_purple: #1a124f;
+
+header {
+  @include displayCenter(space-between, center);
+  position: relative;
+  color: $white;
+  width: 90%;
+  max-width: 1280px;
+  margin: 36.71px auto 0px auto;
+  .knft {
+    background: linear-gradient(90deg, $violet, $violet_red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  nav {
+    width: 90%;
+    max-width: 538px;
+    ul {
+      @include displayCenter(space-between, center);
+      list-style: none;
+      li {
+        color: $light_gray;
+        transition: color 0.3s ease-in-out;
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+        &.active{
+            color: $white;
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
