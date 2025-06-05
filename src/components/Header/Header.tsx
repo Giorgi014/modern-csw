@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Header.scss";
-import { Button } from "../Buttons/DarkButton/button";
+import { Button } from "../Route/Route";
 
 const Header = () => {
   const [active, setIsActive] = useState<string>("home");
@@ -44,10 +44,10 @@ const Header = () => {
         </ul>
       </nav>
 
-      <Button variant="outlined" isLoading onClick={() => {
+      <Button variant="outlined" onClick={() => {
         console.log('inn')
       }}>
-        Submit
+        Get in Touch
       </Button>
     </header>
   );

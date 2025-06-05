@@ -23,9 +23,9 @@ export const Button = ({
       className={clsx(
         "btn",
         {
-          "btn-contained": variant === "contained",
-          "btn-outlined": variant === "outlined",
-          "btn-disabled": isDisabled
+          "btn_contained": variant === "contained",
+          "btn_outlined": variant === "outlined",
+          "btn_disabled": isDisabled
         },
         props.className
       )}

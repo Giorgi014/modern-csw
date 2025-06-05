@@ -1,3 +1,3 @@
-import DarkBtn from "../Buttons/DarkButton/button";
+import {Button} from "../Buttons/button";
 
-export {DarkBtn};
+export {Button};
