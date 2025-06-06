@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Axiforma bold";
+  src: url(../../../../assets/fonts/axiforma/Axiforma-Bold.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: "Axiforma thin";
+  src: url(../../../../assets/fonts/axiforma/Axiforma-ThinItalic.woff2)
+    format("woff2");
+}
+
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$white: #ffffff;
+$light_gray: #ffffff53;
+$violet: #df1cff;
+$violet_red: #ea0070;
+$aqua: #1ee0e1;
+$purple: #100943;
+$light_purple: #1a124f;
+
+.create_cell_container {
+  @include displayCenter(center, center);
+  margin: 130px auto;
+  color: $white;
+  .create_cell_explore {
+    max-width: 632px;
+    .create_and_sell {
+      font-size: 55.74px;
+      font-family: "Axiforma bold";
+      line-height: 150%;
+      letter-spacing: 0%;
+      span {
+        color: $aqua;
+        font-family: "Axiforma thin";
+      }
+    }
+    .info_txt {
+      max-width: 494.95px;
+      margin: 32px 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 20px;
+    }
+    .btn {
+      margin-top: 32px;
+    }
+    .overview {
+      margin-top: 135px;
+    }
+  }
+}

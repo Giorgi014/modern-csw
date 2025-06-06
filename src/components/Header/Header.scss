@@ -6,12 +6,17 @@
 
 $white: #ffffff;
 $light_gray: #ffffff53;
-// $light_gray: #7B7D93;
 $violet: #df1cff;
 $violet_red: #ea0070;
 $aqua: #1ee0e1;
 $purple: #100943;
 $light_purple: #1a124f;
+
+@keyframes moveGradient {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
 
 header {
   @include displayCenter(space-between, center);
@@ -27,6 +32,11 @@ header {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    transition: animation 3s ease-in-out;
+
+    &:hover {
+      animation: moveGradient 3s linear infinite;
+    }
   }
   nav {
     width: 90%;
@@ -40,8 +50,8 @@ header {
         font-size: 20px;
         font-weight: 400;
         cursor: pointer;
-        &.active{
-            color: $white;
+        &.active {
+          color: $white;
         }
         &:hover {
           color: $white;

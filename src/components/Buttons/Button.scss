@@ -14,27 +14,24 @@ $light_purple: #1a124f;
 $violet_pink: #e50aa7;
 $transparent_violet: #ff17bd42;
 
-
-@property --angle{
-  syntax: '<angle>';
+@property --angle {
+  syntax: "<angle>";
   inherits: false;
   initial-value: 0deg;
 }
 
 @keyframes rotate {
-  0%{
+  0% {
     --angle: 0deg;
   }
-  100%{
+  100% {
     --angle: 360deg;
   }
 }
 
-
 .btn {
   width: 201px;
   height: 54px;
-  // padding: 12px 40px;
   border: none;
   border-radius: 8px;
   color: $white;
@@ -44,16 +41,40 @@ $transparent_violet: #ff17bd42;
 }
 
 .btn_contained {
-  background-color: aquamarine;
+  position: relative;
+  background: linear-gradient(145deg, $violet, $violet_red);
+  transition: color 0.3s ease-in-out;
+  overflow: hidden;
+  isolation: isolate;
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(145deg, $aqua, rgb(0, 53, 128));
+    transition: width 0.5s ease;
+  }
+  &:hover::before {
+    width: 100%;
+  }
 }
 
 .btn_outlined {
   position: relative;
-  background-color: rgb(34,30,67);
+  background-color: rgb(34, 30, 67);
   &::after {
     content: "";
     position: absolute;
-    background-image: conic-gradient(from var(--angle),  $violet_pink, $transparent_violet);
+    background-image: conic-gradient(
+      from var(--angle),
+      $violet_pink,
+      $transparent_violet,
+      $violet_pink
+    );
     padding: 1.5px;
     width: 100%;
     height: 100%;
@@ -63,6 +84,11 @@ $transparent_violet: #ff17bd42;
     z-index: -1;
     border-radius: 8px;
     animation: rotate 5s linear infinite;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  &:hover::after {
+    content: "";
+    box-shadow: 0px 0px 10px 2px $violet_pink;
   }
 }
 

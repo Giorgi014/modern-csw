@@ -1,7 +1,10 @@
+import CacContainer from "./CreatAndCell/CacContainer";
 import "./Home.scss";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <CacContainer/>
+  );
 };
 
 export default Home;

@@ -4,13 +4,13 @@ import "./index.scss";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const Home = React.lazy(() => import("./components/Main/Home/Home.tsx"));
+const Main = React.lazy(() => import("./components/Main/Main"));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [{ index: true, element: <Home /> }],
+    children: [{ index: true, element: <Main /> }],
   },
 ]);
 

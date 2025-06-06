@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Axiforma bold";
+  src: url(../../../../assets/fonts/axiforma/Axiforma-Bold.woff2)
+    format("woff2");
+}
+
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.overview_container {
+  @include displayCenter(center, flex-start);
+  flex-direction: column;
+  width: max-content;
+  .marketplace_overview {
+    @include displayCenter(center, center);
+    gap: 16px;
+    .eye {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+    .marketplace_overview_head {
+      font-family: "Axiforma bold";
+      font-size: 32px;
+      line-height: 118.5%;
+      letter-spacing: 0%;
+    }
+  }
+  .marketplace_overview_info {
+    @include displayCenter(center, center);
+    gap: 64px;
+    margin-top: 32px;
+    .head {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 150%;
+      letter-spacing: 0%;
+      margin-bottom: 16px;
+    }
+    .number {
+      font-family: "Axiforma bold";
+      font-size: 32px;
+      line-height: 118.5%;
+      letter-spacing: 0%;
+      width: 148px;
+    }
+  }
+}
