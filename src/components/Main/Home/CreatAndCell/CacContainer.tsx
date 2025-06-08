@@ -1,4 +1,4 @@
-import { Button, Overview } from "../../../Route/Route";
+import { Button, Overview, UserPhoto } from "../../../Route/Route";
 import "./CacContainer.scss";
 
 const CacContainer = () => {
@@ -13,11 +13,16 @@ const CacContainer = () => {
           metaverses, and more.
         </p>
         <div className="btn">
-          <Button variant="contained">Explore NTFs</Button>
+          <Button variant="contained" className="explore_btn">
+            Explore NTFs
+          </Button>
         </div>
         <div className="overview">
           <Overview />
         </div>
+      </section>
+      <section className="create_cell_image">
+        <UserPhoto />
       </section>
     </article>
   );

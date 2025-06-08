@@ -24,7 +24,8 @@ header {
   color: $white;
   width: 90%;
   max-width: 1280px;
-  margin: 36.71px auto 0px auto;
+  padding-top: 36.71px;
+  margin: 0 auto;
   .knft {
     background: linear-gradient(90deg, $violet, $violet_red);
     background-clip: text;

@@ -8,8 +8,10 @@ const Footer = React.lazy(() => import("./components/Footer/Footer"));
 function App() {
   return (
     <>
-      <Header />
-      <Outlet />
+      <div className="sectionHighlight">
+        <Header />
+        <Outlet />
+      </div>
       <Footer />
     </>
   );

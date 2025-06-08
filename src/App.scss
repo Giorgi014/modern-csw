@@ -1,0 +1,13 @@
+.sectionHighlight {
+  background: radial-gradient(
+    rgba(217, 217, 217, 0.1) 0%,
+    rgba(217, 217, 217, 0.1) 0%,
+    rgba(41, 127, 255, 0.1) 0%,
+    rgba(191, 56, 255, 0.1) 22%,
+    rgba(207, 104, 255, 0.1) 52%,
+    rgba(40, 203, 255, 0.1) 74%,
+    rgba(225, 161, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}

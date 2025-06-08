@@ -24,7 +24,7 @@ $purple: #100943;
 $light_purple: #1a124f;
 
 .create_cell_container {
-  @include displayCenter(center, center);
+  @include displayCenter(space-around, center);
   margin: 130px auto;
   color: $white;
   .create_cell_explore {
@@ -47,6 +47,9 @@ $light_purple: #1a124f;
     }
     .btn {
       margin-top: 32px;
+      .explore_btn{
+        box-shadow: 0px 0px 200px 1px $violet;
+      }
     }
     .overview {
       margin-top: 135px;
