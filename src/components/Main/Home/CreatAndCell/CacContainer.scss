@@ -24,7 +24,7 @@ $purple: #100943;
 $light_purple: #1a124f;
 
 .create_cell_container {
-  @include displayCenter(space-around, center);
+  @include displayCenter(space-around, flex-start);
   margin: 130px auto;
   color: $white;
   .create_cell_explore {
