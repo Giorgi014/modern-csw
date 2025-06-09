@@ -24,9 +24,11 @@ $purple: #100943;
 $light_purple: #1a124f;
 
 .create_cell_container {
-  @include displayCenter(space-around, flex-start);
+  @include displayCenter(space-between, flex-start);
   margin: 130px auto;
   color: $white;
+  width: 90%;
+  max-width: 1280px;
   .create_cell_explore {
     max-width: 632px;
     .create_and_sell {

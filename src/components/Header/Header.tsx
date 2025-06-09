@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <h1 className="knft">KNFT.</h1>
-      <nav>
+      <nav className="navigation">
         <ul>
           <li
             className={`home ${active === "home" ? "active" : ""}`}

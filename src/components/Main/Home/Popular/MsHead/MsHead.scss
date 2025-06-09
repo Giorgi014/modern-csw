@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Axiforma bold";
+  src: url(../../../../../assets/fonts/axiforma/Axiforma-Bold.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: "Axiforma medium";
+  src: url(../../../../../assets/fonts/axiforma/Axiforma-Medium.woff2)
+    format("woff2");
+}
+@font-face {
+  font-family: "Axiforma thin";
+  src: url(../../../../../assets/fonts/axiforma/Axiforma-ThinItalic.woff2)
+    format("woff2");
+}
+
+@mixin displayCenter($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+$white: #ffffff;
+$light_gray: #ffffff53;
+$violet: #df1cff;
+$violet_red: #ea0070;
+$aqua: #1ee0e1;
+$purple: #100943;
+$light_purple: #1a124f;
+
+.ms_header_container {
+  @include displayCenter(center, center);
+  flex-direction: column;
+  max-width: 795.88px;
+  margin-bottom: 64px;
+  .ms_popular_head {
+    font-family: "Axiforma bold";
+    font-size: 40px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    margin-bottom: 32px;
+    span {
+      font-family: "Axiforma thin";
+      color: $aqua;
+    }
+  }
+  .ms_navigation {
+    width: 100%;
+    ul {
+      @include displayCenter(space-between, center);
+      width: 100%;
+      list-style: none;
+      li {
+        @include displayCenter(center, center);
+        font-family: "Axiforma medium";
+        font-size: 22px;
+        width: 162.88px;
+        height: 49.61px;
+        color: $light_gray;
+        cursor: pointer;
+      }
+      .active {
+        @include displayCenter(center, center);
+        position: relative;
+        width: 162.88px;
+        height: 49.61px;
+        color: $white;
+      }
+    }
+  }
+}

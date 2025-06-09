@@ -32,6 +32,11 @@ $dark_blue: #07003e;
 
 .user_photo_container {
   position: relative;
+  .bg_svg{
+    position: absolute;
+    top: -50px;
+    left: -50px;
+  }
   .user_photo_cont {
     width: 504px;
     height: 504px;
@@ -73,6 +78,14 @@ $dark_blue: #07003e;
         z-index: -1;
         animation: rotate 5s linear infinite;
         transition: box-shadow 0.3s ease-in-out;
+      }
+      .user_name{
+        max-width: 107px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 118.5%;
+        letter-spacing: 0%;
+        text-align: center;
       }
     }
   }
